@@ -35,6 +35,7 @@
         android:layout_height="0dp"
         android:layout_rowWeight="1"
         android:layout_columnWeight="1"
+        android:textColor="@android:color/white"
         android:text="ADVANCED" />
 
     <Button
@@ -45,6 +46,7 @@
         android:layout_height="0dp"
         android:layout_rowWeight="1"
         android:layout_columnWeight="1"
+        android:textColor="@android:color/white"
         android:text="(" />
 
     <Button
@@ -55,6 +57,7 @@
         android:layout_height="0dp"
         android:layout_rowWeight="1"
         android:layout_columnWeight="1"
+        android:textColor="@android:color/white"
         android:text=")" />
 
     <!-- ROW 2 -->
@@ -66,6 +69,7 @@
         android:layout_height="0dp"
         android:layout_rowWeight="1"
         android:layout_columnWeight="1"
+        android:textColor="@android:color/white"
         android:text="MR" />
 
     <Button
@@ -76,6 +80,7 @@
         android:layout_height="0dp"
         android:layout_rowWeight="1"
         android:layout_columnWeight="1"
+        android:textColor="@android:color/white"
         android:text="MS" />
 
     <Button
@@ -86,6 +91,7 @@
         android:layout_height="0dp"
         android:layout_rowWeight="1"
         android:layout_columnWeight="1"
+        android:textColor="@android:color/white"
         android:text="C" />
 
     <Button
@@ -96,6 +102,7 @@
         android:layout_height="0dp"
         android:layout_rowWeight="1"
         android:layout_columnWeight="1"
+        android:textColor="@android:color/white"
         android:text="CE" />
 
     <!-- ROW 3 -->
@@ -107,6 +114,7 @@
         android:layout_height="0dp"
         android:layout_rowWeight="1"
         android:layout_columnWeight="1"
+        android:textColor="@android:color/white"
         android:text="7" />
 
     <Button
@@ -117,6 +125,7 @@
         android:layout_height="0dp"
         android:layout_rowWeight="1"
         android:layout_columnWeight="1"
+        android:textColor="@android:color/white"
         android:text="8" />
 
     <Button
@@ -127,6 +136,7 @@
         android:layout_height="0dp"
         android:layout_rowWeight="1"
         android:layout_columnWeight="1"
+        android:textColor="@android:color/white"
         android:text="9" />
 
     <Button
@@ -137,6 +147,7 @@
         android:layout_height="0dp"
         android:layout_rowWeight="1"
         android:layout_columnWeight="1"
+        android:textColor="@android:color/white"
         android:text="/" />
 
     <!-- ROW 4 -->
@@ -148,6 +159,7 @@
         android:layout_height="0dp"
         android:layout_rowWeight="1"
         android:layout_columnWeight="1"
+        android:textColor="@android:color/white"
         android:text="4" />
 
     <Button
@@ -158,6 +170,7 @@
         android:layout_height="0dp"
         android:layout_rowWeight="1"
         android:layout_columnWeight="1"
+        android:textColor="@android:color/white"
         android:text="5" />
 
     <Button
@@ -168,6 +181,7 @@
         android:layout_height="0dp"
         android:layout_rowWeight="1"
         android:layout_columnWeight="1"
+        android:textColor="@android:color/white"
         android:text="6" />
 
     <Button
@@ -178,6 +192,7 @@
         android:layout_height="0dp"
         android:layout_rowWeight="1"
         android:layout_columnWeight="1"
+        android:textColor="@android:color/white"
         android:text="*" />
 
     <!-- ROW 5 -->
@@ -189,6 +204,7 @@
         android:layout_height="0dp"
         android:layout_rowWeight="1"
         android:layout_columnWeight="1"
+        android:textColor="@android:color/white"
         android:text="1" />
 
     <Button
@@ -199,6 +215,7 @@
         android:layout_height="0dp"
         android:layout_rowWeight="1"
         android:layout_columnWeight="1"
+        android:textColor="@android:color/white"
         android:text="2" />
 
     <Button
@@ -209,6 +226,7 @@
         android:layout_height="0dp"
         android:layout_rowWeight="1"
         android:layout_columnWeight="1"
+        android:textColor="@android:color/white"
         android:text="3" />
 
     <Button
@@ -219,6 +237,7 @@
         android:layout_height="0dp"
         android:layout_rowWeight="1"
         android:layout_columnWeight="1"
+        android:textColor="@android:color/white"
         android:text="-" />
 
     <!-- ROW 6 -->
@@ -230,6 +249,7 @@
         android:layout_height="0dp"
         android:layout_rowWeight="1"
         android:layout_columnWeight="1"
+        android:textColor="@android:color/white"
         android:text="+/-" />
 
     <Button
@@ -240,6 +260,7 @@
         android:layout_height="0dp"
         android:layout_rowWeight="1"
         android:layout_columnWeight="1"
+        android:textColor="@android:color/white"
         android:text="0" />
 
     <Button
@@ -250,6 +271,7 @@
         android:layout_height="0dp"
         android:layout_rowWeight="1"
         android:layout_columnWeight="1"
+        android:textColor="@android:color/white"
         android:text="=" />
 
     <Button
@@ -260,6 +282,7 @@
         android:layout_height="0dp"
         android:layout_rowWeight="1"
         android:layout_columnWeight="1"
+        android:textColor="@android:color/white"
         android:text="+" />
 
     <!-- ROW 7 (ADVANCED - HIDDEN) -->
@@ -271,6 +294,7 @@
         android:layout_height="0dp"
         android:layout_rowWeight="1"
         android:layout_columnWeight="1"
+        android:textColor="@android:color/white"
         android:text="sin"
         android:visibility="gone" />
 
@@ -282,6 +306,7 @@
         android:layout_height="0dp"
         android:layout_rowWeight="1"
         android:layout_columnWeight="1"
+        android:textColor="@android:color/white"
         android:text="cos"
         android:visibility="gone" />
 
@@ -293,6 +318,7 @@
         android:layout_height="0dp"
         android:layout_rowWeight="1"
         android:layout_columnWeight="1"
+        android:textColor="@android:color/white"
         android:text="tan"
         android:visibility="gone" />
 
@@ -304,6 +330,7 @@
         android:layout_height="0dp"
         android:layout_rowWeight="1"
         android:layout_columnWeight="1"
+        android:textColor="@android:color/white"
         android:text="√"
         android:visibility="gone" />
 
