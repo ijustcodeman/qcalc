@@ -19,7 +19,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    // TODO: Advanced Calculations, +/-
+    // TODO: fix MR bug, where negative numbers are not read
 
 
 
@@ -519,6 +519,10 @@ public class MainActivity extends AppCompatActivity {
         return c == '+' || c == '-' || c == '/' || c == '*';
     }
 
+    private boolean isNotNumber(char c){
+        return !(c >= '0' && c <= '9');
+    }
+
     private double calculateResult(String input) throws Exception {
         try {
             Expression e = new ExpressionBuilder(input).build();
@@ -571,7 +575,17 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private boolean isMemoryReady(){
-        return !input.contains("+") && !input.contains("-") && !input.contains("*") && !input.contains("/") && !input.contains("(") && !input.contains(")") && !input.contains("ERROR") && !input.contains("sqrt") && !input.contains("sin") && !input.contains("tan") && !input.contains("cos");
+        int counter = 0;
+        char temp = '\0';
+        for (int i = 0; i < input.length(); i++){
+            if (isNotNumber(input.charAt(i))){
+                if (counter < 1){
+                    temp = input.charAt(i);
+                }
+                counter++;
+            }
+        }
+        return counter == 0 || (counter == 1 && input.charAt(0) == temp);
     }
 
     private boolean hasOperator(){
