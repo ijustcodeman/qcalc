@@ -158,6 +158,7 @@ public class MainActivity extends AppCompatActivity {
         equal = findViewById(R.id.equal);
         equal.setOnClickListener(equalsListener);
         pm = findViewById(R.id.pm);
+        pm.setOnClickListener(pmListener);
         advanced = findViewById(R.id.advanced);
         advanced.setOnClickListener(advancedListener);
         leftBracket = findViewById(R.id.leftBracket);
@@ -484,6 +485,35 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
+    private View.OnClickListener pmListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            if (input.isEmpty() || !hasOperator()){
+                input = "(-" + input;
+                formattedDisplay();
+                return;
+            }
+
+            for (int i = input.length(); i > 0; i--){
+                if (isOperator(input.charAt(i - 1))){
+                    if (input.charAt(i - 1) == '-'){
+                        StringBuilder sb = new StringBuilder(input);
+                        sb.setCharAt(i - 1, '+');
+                        input = sb.toString();
+                    }
+                    else{
+                        StringBuilder sb = new StringBuilder();
+                        String temp1 = input.substring(0, i);
+                        String temp2 = input.substring(i);
+                        input = sb.append(temp1).append("(-").append(temp2).toString();
+                    }
+                    formattedDisplay();
+                    return;
+                }
+            }
+        }
+    };
+
 
     private boolean isOperator(char c){
         return c == '+' || c == '-' || c == '/' || c == '*';
@@ -542,6 +572,10 @@ public class MainActivity extends AppCompatActivity {
 
     private boolean isMemoryReady(){
         return !input.contains("+") && !input.contains("-") && !input.contains("*") && !input.contains("/") && !input.contains("(") && !input.contains(")") && !input.contains("ERROR") && !input.contains("sqrt") && !input.contains("sin") && !input.contains("tan") && !input.contains("cos");
+    }
+
+    private boolean hasOperator(){
+        return input.contains("+") || input.contains("-") || input.contains("*") || input.contains("/");
     }
 
     private String formatResult(double value) {
