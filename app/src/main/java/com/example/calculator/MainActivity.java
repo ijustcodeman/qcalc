@@ -186,6 +186,8 @@ public class MainActivity extends AppCompatActivity {
         public void onClick(View v) {
             int id = v.getId();
 
+            applyClickAnimation(v);
+
             if (error){
                 error = false;
             }
@@ -270,6 +272,8 @@ public class MainActivity extends AppCompatActivity {
         public void onClick(View v) {
             int id = v.getId();
 
+            applyClickAnimation(v);
+
             if (error){
                 operator = true;
             }
@@ -305,6 +309,9 @@ public class MainActivity extends AppCompatActivity {
     private View.OnClickListener equalsListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
+
+            applyClickAnimation(v);
+
             if (!isEvenBrackets()){
                 return;
             }
@@ -327,6 +334,8 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onClick(View v) {
             int id = v.getId();
+
+            applyClickAnimation(v);
 
             if (id == R.id.c){
                 input = "";
@@ -362,6 +371,8 @@ public class MainActivity extends AppCompatActivity {
         public void onClick(View v) {
             int id = v.getId();
 
+            applyClickAnimation(v);
+
             if (id == R.id.mr){
                 if (isMemoryReady()){
                     input = memoryList.get(0);
@@ -392,6 +403,8 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public boolean onLongClick(View v) {
             int id = v.getId();
+
+            applyClickAnimation(v);
 
             if (id == R.id.mr){
                 if (isMemoryReady()){
@@ -424,6 +437,9 @@ public class MainActivity extends AppCompatActivity {
     private View.OnClickListener advancedListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
+
+            applyClickAnimation(v);
+
             if (isAdvancedVisible) {
                 isAdvancedVisible = false;
 
@@ -452,6 +468,8 @@ public class MainActivity extends AppCompatActivity {
         public void onClick(View v) {
             int id = v.getId();
 
+            applyClickAnimation(v);
+
             if (error){
                 error = false;
             }
@@ -474,6 +492,8 @@ public class MainActivity extends AppCompatActivity {
         public void onClick(View v) {
             int id = v.getId();
 
+            applyClickAnimation(v);
+
             if (id == R.id.leftBracket){
                 input += "(";
             }
@@ -488,6 +508,9 @@ public class MainActivity extends AppCompatActivity {
     private View.OnClickListener pmListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
+
+            applyClickAnimation(v);
+
             if (input.isEmpty() || !hasOperator()){
                 input = "(-" + input;
                 formattedDisplay();
@@ -634,5 +657,22 @@ public class MainActivity extends AppCompatActivity {
             }
         }
         return leftBrackets == rightBrackets;
+    }
+
+    private void applyClickAnimation(View v){
+
+        v.animate().cancel();
+        v.setScaleX(1f);
+        v.setScaleY(1f);
+
+        v.animate()
+                .scaleX(0.9f)
+                .scaleY(0.9f)
+                .setDuration(100)
+                .withEndAction(() -> v.animate()
+                        .scaleX(1f)
+                        .scaleY(1f)
+                        .setDuration(100)
+                );
     }
 }
