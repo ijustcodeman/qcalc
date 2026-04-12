@@ -20,7 +20,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    // TODO: fix MR bug, where negative numbers are not read
+    // TODO: Haptic Feedback, Light/Dark mode
 
 
 
