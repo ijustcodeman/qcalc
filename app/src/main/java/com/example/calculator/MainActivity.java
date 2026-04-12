@@ -161,7 +161,9 @@ public class MainActivity extends AppCompatActivity {
         pm = findViewById(R.id.pm);
         pm.setOnClickListener(pmListener);
         advanced = findViewById(R.id.advanced);
-        advanced.setOnClickListener(advancedListener);
+        if (advanced != null) {
+            advanced.setOnClickListener(advancedListener);
+        }
         leftBracket = findViewById(R.id.leftBracket);
         leftBracket.setOnClickListener(bracketListener);
         rightBracket = findViewById(R.id.rightBracket);
