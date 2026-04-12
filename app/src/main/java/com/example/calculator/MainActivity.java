@@ -1,6 +1,7 @@
 package com.example.calculator;
 
 import android.os.Bundle;
+import android.view.HapticFeedbackConstants;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -675,4 +676,11 @@ public class MainActivity extends AppCompatActivity {
                         .setDuration(100)
                 );
     }
+
+    /*
+    private void applyHapticFeedback(View v){
+        v.setHapticFeedbackEnabled(true);
+        v.performHapticFeedback(HapticFeedbackConstants.KEYBOARD_TAP);
+    }
+     */
 }
