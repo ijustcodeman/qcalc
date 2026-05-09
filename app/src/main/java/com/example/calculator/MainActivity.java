@@ -8,6 +8,7 @@ import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -19,10 +20,6 @@ import java.util.ArrayList;
 
 
 public class MainActivity extends AppCompatActivity {
-
-    // TODO: Haptic Feedback, Light/Dark mode
-
-
 
     // buttons for the numbers
     Button zero;
@@ -91,6 +88,9 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        // force dark mode
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
@@ -207,6 +207,24 @@ public class MainActivity extends AppCompatActivity {
             formattedDisplay();
         }
     };
+
+    private void applyClickAnimation(View v) {
+        v.performHapticFeedback(HapticFeedbackConstants.VIRTUAL_KEY);
+
+        v.animate().cancel();
+        v.setScaleX(1f);
+        v.setScaleY(1f);
+
+        v.animate()
+                .scaleX(0.9f)
+                .scaleY(0.9f)
+                .setDuration(100)
+                .withEndAction(() -> v.animate()
+                        .scaleX(1f)
+                        .scaleY(1f)
+                        .setDuration(100)
+                );
+    }
 
     private void findButton(int id){
         if (id == R.id.zero){
@@ -661,28 +679,4 @@ public class MainActivity extends AppCompatActivity {
         }
         return leftBrackets == rightBrackets;
     }
-
-    private void applyClickAnimation(View v){
-
-        v.animate().cancel();
-        v.setScaleX(1f);
-        v.setScaleY(1f);
-
-        v.animate()
-                .scaleX(0.9f)
-                .scaleY(0.9f)
-                .setDuration(100)
-                .withEndAction(() -> v.animate()
-                        .scaleX(1f)
-                        .scaleY(1f)
-                        .setDuration(100)
-                );
-    }
-
-    /*
-    private void applyHapticFeedback(View v){
-        v.setHapticFeedbackEnabled(true);
-        v.performHapticFeedback(HapticFeedbackConstants.KEYBOARD_TAP);
-    }
-     */
 }

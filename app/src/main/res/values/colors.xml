@@ -1,9 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
-    <color name="operations_dark">#473F3F</color>
-    <color name="operations_light">#8C8585</color>
-    <color name="numbers">#242020</color>
-    <color name="equals">#32CD32</color>
+    <!-- Background Colors -->
+    <color name="bg_black">#000000</color>
+    <color name="display_text">#FFFFFF</color>
+
+    <!-- Button Colors -->
+    <color name="btn_number_bg">#333333</color>
+    <color name="btn_number_text">#FFFFFF</color>
+
+    <color name="btn_operator_bg">#FF9F0A</color>
+    <color name="btn_operator_text">#FFFFFF</color>
+
+    <color name="btn_special_bg">#A5A5A5</color>
+    <color name="btn_special_text">#000000</color>
+
+    <color name="btn_advanced_bg">#242020</color>
+
+    <!-- Legacy support for existing IDs if needed -->
+    <color name="operations_dark">#242020</color>
+    <color name="operations_light">#A5A5A5</color>
+    <color name="numbers">#333333</color>
+    <color name="equals">#FF9F0A</color>
 </resources>
