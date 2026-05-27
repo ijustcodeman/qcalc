@@ -27,7 +27,6 @@
         android:gravity="bottom|end"
         android:padding="32dp" />
 
-    <!-- Memory and Brackets Row -->
     <com.google.android.material.button.MaterialButton
         android:id="@+id/mr"
         style="@style/Widget.Material3.Button.TonalButton"
@@ -92,7 +91,6 @@
         android:textColor="@color/btn_special_text"
         app:cornerRadius="100dp" />
 
-    <!-- Clear and Division Row -->
     <com.google.android.material.button.MaterialButton
         android:id="@+id/c"
         style="@style/Widget.Material3.Button.TonalButton"
@@ -156,7 +154,6 @@
         android:textColor="@color/btn_operator_text"
         app:cornerRadius="100dp" />
 
-    <!-- Scientific Functions Row -->
     <com.google.android.material.button.MaterialButton
         android:id="@+id/sin"
         style="@style/Widget.Material3.Button.TonalButton"
@@ -221,7 +218,6 @@
         android:textColor="@color/btn_operator_text"
         app:cornerRadius="100dp" />
 
-    <!-- Numbers and Operations Rows -->
     <com.google.android.material.button.MaterialButton
         android:id="@+id/seven"
         android:layout_row="4"

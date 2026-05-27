@@ -27,7 +27,6 @@
         android:gravity="bottom|end"
         android:padding="24dp" />
 
-    <!-- Advanced Row (Hidden by default) -->
     <com.google.android.material.button.MaterialButton
         android:id="@+id/sin"
         style="@style/Widget.Material3.Button.TonalButton"
@@ -96,7 +95,6 @@
         android:visibility="gone"
         app:cornerRadius="50dp" />
 
-    <!-- Special Functions Row -->
     <com.google.android.material.button.MaterialButton
         android:id="@+id/advanced"
         style="@style/Widget.Material3.Button.TonalButton"
@@ -146,7 +144,6 @@
         android:textColor="@color/btn_special_text"
         app:cornerRadius="50dp" />
 
-    <!-- Memory and Clear Row -->
     <com.google.android.material.button.MaterialButton
         android:id="@+id/mr"
         style="@style/Widget.Material3.Button.TonalButton"
@@ -211,7 +208,6 @@
         android:textColor="@color/btn_special_text"
         app:cornerRadius="50dp" />
 
-    <!-- Numbers and Operators -->
     <com.google.android.material.button.MaterialButton
         android:id="@+id/seven"
         android:layout_row="4"

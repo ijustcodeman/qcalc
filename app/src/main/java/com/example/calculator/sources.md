@@ -26,4 +26,4 @@ Folgende Quellen und Dokumentationen wurden für die Bearbeitung der Aufgabe ver
     *   Thema: Mathematische Formelauswertung und Parsing für die Taschenrechner-Logik.
     *   URL: [https://www.objecthunter.net/exp4j/](https://www.objecthunter.net/exp4j/)
 
-Für die Erstellung von Kommentaren sowie der Verschönerung vom Quellverzeichnis und Wissenslücken wurde KI genutzt.
+Für die Verschönerung vom Quellverzeichnis sowie Wissenslücken wurde KI genutzt.
